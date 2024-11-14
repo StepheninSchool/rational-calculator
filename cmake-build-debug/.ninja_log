@@ -1,0 +1,18 @@
+# ninja log v6
+2	222	7532552306786913	build.ninja	91be5e6d0497dcb
+13	1699	7532551588195175	CMakeFiles/rational.dir/source/Rational.cpp.obj	1989b722e47bd957
+5	1676	7532551588115098	CMakeFiles/rational.dir/source/main.cpp.obj	2626ad069519fc9f
+382	1406	7532539759154087	rational.exe	b2ec77460a7733f8
+18	1669	7532551588255144	CMakeFiles/rational.dir/source/validation.cpp.obj	9e2f8a1b381cb592
+5	281	7532552769052711	CMakeFiles/rational.dir/source/main.cpp.obj	2626ad069519fc9f
+11	574	7532552769112691	CMakeFiles/rational.dir/source/validation.cpp.obj	9e2f8a1b381cb592
+9	1701	7532552769092727	CMakeFiles/rational.dir/source/Rational.cpp.obj	1989b722e47bd957
+5	301	7532553023738973	CMakeFiles/rational.dir/source/main.cpp.obj	2626ad069519fc9f
+9	1754	7532553023778974	CMakeFiles/rational.dir/source/Rational.cpp.obj	1989b722e47bd957
+4	291	7532553292716213	CMakeFiles/rational.dir/source/main.cpp.obj	2626ad069519fc9f
+9	1570	7532553292766130	CMakeFiles/rational.dir/source/validation.cpp.obj	9e2f8a1b381cb592
+7	1611	7532553292746135	CMakeFiles/rational.dir/source/Rational.cpp.obj	1989b722e47bd957
+11	303	7532554727123742	CMakeFiles/rational.dir/source/main.cpp.obj	2626ad069519fc9f
+22	1719	7532554727240612	CMakeFiles/rational.dir/source/validation.cpp.obj	9e2f8a1b381cb592
+17	1745	7532554727184006	CMakeFiles/rational.dir/source/Rational.cpp.obj	1989b722e47bd957
+1745	3706	7532554744469920	rational.exe	7097e217a9f00a98
