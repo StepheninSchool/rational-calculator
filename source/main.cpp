@@ -8,8 +8,8 @@ int main() {
     do {
         std::string input1, input2;
 
-        // Get the first rational number
-        Rational r1; // Calls default constructor
+
+        Rational r1;
         do {
             std::cout << "Enter the first rational number (or whole number): ";
             std::cin >> input1;
@@ -30,8 +30,8 @@ int main() {
         std::cout << "First Rational Number: " << r1 << "\n";
         std::cout << "========================\n";
 
-        // Get the second rational number
-        Rational r2; // Calls default constructor
+
+        Rational r2;
         do {
             std::cout << "Enter the second rational number (or whole number): ";
             std::cin >> input2;
@@ -52,7 +52,7 @@ int main() {
         std::cout << "Second Rational Number: " << r2 << "\n";
         std::cout << "========================\n";
 
-        // Demonstrate arithmetic operations
+
         std::cout << "Addition (" << r1 << " + " << r2 << "): " << r1 + r2 << "\n";
         std::cout << "========================\n";
 
@@ -65,7 +65,7 @@ int main() {
         std::cout << "Division (" << r1 << " / " << r2 << "): " << r1 / r2 << "\n";
         std::cout << "========================\n";
 
-        // Demonstrate comparison operations
+
         std::cout << "Comparison Results:\n";
         std::cout << "========================\n";
         std::cout << "Greater than (>): " << (r1 > r2 ? "true" : "false") << "\n";
@@ -73,7 +73,7 @@ int main() {
         std::cout << "Equal (==): " << (r1 == r2 ? "true" : "false") << "\n";
         std::cout << "========================\n";
 
-        // Ask if the user wants to perform another calculation
+
         do {
             std::cout << "Do you want to perform another calculation? (y/n): ";
             std::cin >> choice;

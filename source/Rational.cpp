@@ -14,8 +14,8 @@ Rational::Rational(int wholeNumber, bool display) : numerator(wholeNumber), deno
         std::cout << "One-Argument Constructor: Initialized to " << wholeNumber << "/1\n";
     }
 }
-
-Rational::Rational(int num, int denom, bool display) {
+//Source : Clang Tidy
+[[maybe_unused]] Rational::Rational(int num, int denom, bool display) {
     if (!isValidDenominator(denom)) throw std::invalid_argument("Denominator cannot be zero.");
     numerator = num;
     denominator = denom;
@@ -24,8 +24,10 @@ Rational::Rational(int num, int denom, bool display) {
     }
     normalize();
 }
-
+// Source: https://en.cppreference.com/w/cpp/regex/regex_match
+// Source: https://stackoverflow.com/questions/2811031/decimal-or-numeric-values-in-regular-expression-validation
 Rational::Rational(const std::string& input, bool display) {
+
     std::regex rationalPattern(R"(^(-?\d+)(/(-?\d+))?$)");
     std::smatch match;
     if (std::regex_match(input, match, rationalPattern)) {
@@ -40,7 +42,7 @@ Rational::Rational(const std::string& input, bool display) {
         throw std::invalid_argument("Invalid format for rational number. Use 'a/b' or 'a'.");
     }
 }
-
+// Source: https://en.cppreference.com/w/cpp/numeric/gcd
 void Rational::normalize() {
     int gcdVal = std::gcd(numerator, denominator);
     numerator /= gcdVal;
@@ -51,7 +53,7 @@ void Rational::normalize() {
     }
     std::cout << "After normalization: " << numerator << "/" << denominator << "\n";
 }
-
+// Source: https://www.geeksforgeeks.org/operator-overloading-cpp/
 Rational Rational::operator+(const Rational& other) const {
     return {numerator * other.denominator + other.numerator * denominator,
                     denominator * other.denominator};
@@ -65,7 +67,7 @@ Rational Rational::operator-(const Rational& other) const {
 Rational Rational::operator*(const Rational& other) const {
     return {numerator * other.numerator, denominator * other.denominator};
 }
-
+// Source: https://cplusplus.com/reference/stdexcept/invalid_argument/
 Rational Rational::operator/(const Rational& other) const {
     if (other.numerator == 0) {
         throw std::invalid_argument("Cannot divide by zero.");
@@ -73,6 +75,7 @@ Rational Rational::operator/(const Rational& other) const {
     return {numerator * other.denominator, denominator * other.numerator};
 }
 
+//Source: https://www.cplusplus.com/doc/tutorial/operators/
 bool Rational::operator>(const Rational& other) const {
     return numerator * other.denominator > other.numerator * denominator;
 }
@@ -84,7 +87,7 @@ bool Rational::operator<(const Rational& other) const {
 bool Rational::operator==(const Rational& other) const {
     return numerator * other.denominator == other.numerator * denominator;
 }
-
+//source: https://www.learncpp.com/cpp-tutorial/overloading-the-io-operators/
 std::ostream& operator<<(std::ostream& out, const Rational& r) {
     out << r.numerator << "/" << r.denominator;
     return out;
