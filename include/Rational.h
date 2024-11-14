@@ -32,6 +32,4 @@ public:
     friend std::ostream &operator<<(std::ostream &out, const Rational &r);
 };
 
-
-
 #endif // RATIONAL_H
